@@ -1,0 +1,83 @@
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-7" style="color: white">
+    <h1>Editar Entrenador  - <%= entrenadorAEditar.nombres %></h1>
+  </div>
+  <div class="col-sm-2">
+
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4 opaque1">
+    <br>
+    <form action="/Entrenador/EditarEntrenador" method="post">
+      <div class="form-group">
+        <label>Nombres</label>
+        <input type="text" class="form-control" placeholder="Ingrese sus Nombres" name="nombres" value="<%= entrenadorAEditar.nombres %>">
+      </div>
+
+      <div class="form-group">
+        <label>Fecha</label>
+        <input type="date" class="form-control" id="datePicker" placeholder="Ingrese su fecha de inicio:" name="fechaInicio" value="<%= entrenadorAEditar.fechaInicio %>">
+      </div>
+
+      <div class="form-group">
+        <label>Region</label>
+        <select class="form-control" id="exampleSelect1" name="region">
+          <option>Alola</option>
+          <option>Johto</option>
+          <option>Kanto</option>
+          <option>Hoenn</option>
+          <option>Teselia</option>
+          <option>Sinnoh</option>
+          <option>Kalos</option>
+          <option>Islas</option>
+          <option>Sete</option>
+        </select>
+      </div>
+        <input type="hidden" name="idEntrenador" value="<%= entrenadorAEditar.id %>">
+      <button type="submit" class="btn btn-primary">Editar Entrenador :)</button>
+    </form>
+    <br>
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-4 text-center opaque1">
+    <h2><%= entrenadorAEditar.nombres %></h2>
+    <input id="fechaOrigen" hidden value="<%= entrenadorAEditar.fechaInicio %>">
+    <h3>
+      <%= entrenadorAEditar.region %>
+    </h3>
+    <p ><%= entrenadorAEditar.fechaInicio.toDateString() %></p>
+    <img src="/imagenes/red.png" alt="Red pokemon" height="300px">
+  </div>
+  <div class="col-sm-1"></div>
+
+</div>
+<script>
+  function setInputDate(_id){
+    var _dat = document.querySelector(_id);
+    var _fecha=document.querySelector('#fechaOrigen');
+    var hoy = new Date(_fecha.value);
+
+    var d = hoy.getDate(),
+      m = hoy.getMonth()+1,
+      y = hoy.getFullYear(),
+      data;
+
+    if(d < 10){
+      d = "0"+d;
+    }
+    if(m < 10){
+      m = "0"+m;
+    }
+
+    data = y+"-"+m+"-"+(d);
+    _dat.value = data;
+  }
+  setInputDate("#datePicker");
+
+</script>

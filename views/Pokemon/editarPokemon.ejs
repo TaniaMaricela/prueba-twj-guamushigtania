@@ -1,0 +1,131 @@
+<div class="row">
+  <div class="col-sm-1"> </div>
+  <div class="col-sm-4 opaque1">
+    <h1>Editar Pokémon  - <%= pokemonAEditar.nombre %></h1>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-2"> </div>
+  <div class="col-sm-4 opaque1">
+    <form action="/Pokemon/EditarPokemon" method="post">
+
+      <div class="form-group">
+        <label>Nombre del pokémon:</label>
+        <input type="text" class="form-control" placeholder="Ingrese el nombre del pokémon" name="nombre" value="<%= pokemonAEditar.nombre %>">
+      </div>
+      <div class="form-group">
+        <label>Tipo1</label>
+        <select class="form-control" name="tipo1">
+          <option>Acero</option>
+          <option>Agua</option>
+          <option>Bicho</option>
+          <option>Dragón</option>
+          <option>Eléctrico</option>
+          <option>Fantasma</option>
+          <option>Fuego</option>
+          <option>Hada</option>
+          <option>Hielo</option>
+          <option>Lucha</option>
+          <option>Normal</option>
+          <option>Planta</option>
+          <option>Psíquico</option>
+          <option>Roca</option>
+          <option>Siniestro</option>
+          <option>Tierra</option>
+          <option>Veneno</option>
+          <option>Volador</option>
+        </select>
+
+      </div>
+      <div class="form-group">
+        <label>Tipo2</label>
+        <select class="form-control" name="tipo2">
+          <option>Acero</option>
+          <option>Agua</option>
+          <option>Bicho</option>
+          <option>Dragón</option>
+          <option>Eléctrico</option>
+          <option>Fantasma</option>
+          <option>Fuego</option>
+          <option>Hada</option>
+          <option>Hielo</option>
+          <option>Lucha</option>
+          <option>Normal</option>
+          <option>Planta</option>
+          <option>Psíquico</option>
+          <option>Roca</option>
+          <option>Siniestro</option>
+          <option>Tierra</option>
+          <option>Veneno</option>
+          <option>Volador</option>
+        </select>
+
+      </div>
+      <div class="form-group">
+        <label>Entrenador</label>
+        <select class="form-control" name="idEntrenador">
+          <% for(var i=0; i<entrenadores.length; i++){ %>
+          <option value='<%=entrenadores[i].id %>'>
+            <%=entrenadores[i].nombres%>
+          </option>
+          <%  } %>
+        </select>
+      </div>
+      <input type="hidden" name="imagen" value="<%= pokemonAEditar.imagen %>">
+        <input type="hidden" name="idPokemon" value="<%= pokemonAEditar.id %>">
+      <button type="submit" class="btn btn-block">Editar Pokemon :)</button>
+    </form>
+    <br>
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-3 opaque1">
+    <h2 class="text-center ">
+      <%= pokemonAEditar.nombre %>
+    </h2>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <p>
+          Tipo1:
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <p>
+          <%= pokemonAEditar.tipo1 %>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+         <p>
+          Tipo2:
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <p>
+          <%= pokemonAEditar.tipo2 %>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <p>
+          Entrenador:
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <p>
+          <%= pokemonAEditar.idEntrenador.nombres %>
+        </p>
+      </div>
+    </div>
+    <br>
+    <img align="center" id="img1"  src="/imagenes/pokemon/<%= pokemonAEditar.imagen %>.png" height="300px">
+  </div>
+  <div class="col-sm-2"></div>
+</div>

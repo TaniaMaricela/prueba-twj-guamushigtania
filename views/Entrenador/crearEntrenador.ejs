@@ -1,0 +1,65 @@
+
+<div class="row" >
+  <div class="col-sm-2"></div>
+
+  <div class="col-sm-2">
+    <img align="center" id="img1" class="opaque1" src="/imagenes/entrenadores/Ash.png" height="300px" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+  </div>
+  <div class="col-sm-1"></div>
+
+  <div class="col-sm-5 opaque1" style="background-color: rgba(0, 0, 0, .8); color: yellow;" >
+
+    <h2>Entrenador</h2>
+    <form action="/Entrenador/CrearEntrenador" method="post" >
+
+      <div class="form-group" >
+        <label>Nombre</label>
+        <select class="form-control" id="exampleSelect1" name="region" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+          <option>Ash</option>
+          <option>Brock</option>
+          <option>Eco</option>
+          <option>Gary</option>
+          <option>Guay</option>
+          <option>Hoja</option>
+          <option>James</option>
+          <option>Jenny</option>
+          <option>Jessie</option>
+          <option>Joy</option>
+          <option>May</option>
+          <option>Misty</option>
+          <option>Red</option>
+          <option>Roque</option>
+          <option>Sinnoh</option>
+          <option>Trace</option>
+        </select>
+       <!--<input type="text" class="form-control" placeholder="Ingrese su nombre" name="nombres" style="background-color: rgba(0, 0, 0, .8); color: yellow;">-->
+      </div>
+
+      <div class="form-group" >
+        <label>Fecha inicio</label>
+        <input type="date" class="form-control"  id="datePicker" name="fechaInicio" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+      </div>
+
+      <div class="form-group">
+        <label>Region</label>
+        <select class="form-control" id="exampleSelect1" name="region" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+          <option>Alola</option>
+          <option>Johto</option>
+          <option>Kanto</option>
+          <option>Hoenn</option>
+          <option>Teselia</option>
+          <option>Sinnoh</option>
+          <option>Kalos</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-success">Crear Entrenador :)</button>
+    </form>
+
+    <br>
+
+    <script src="/bootstrap/js/codigo.js"></script>
+  </div>
+
+  <div class="col-sm-4"></div>
+</div>

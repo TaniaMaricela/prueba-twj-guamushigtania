@@ -1,0 +1,84 @@
+<h1>Lista de Entrenadores</h1>
+
+<div class="row">
+  <div class="col-sm-9">
+    <p>Aqui se listan todos los pokémon del sistema de pokémon.</p>
+  </div>
+  <div class="col-sm-3">
+    <a href="/CrearPokemon" class="btn btn-block btn-success">
+      Crear Pokemon
+    </a>
+  </div>
+</div>
+<br>
+
+
+<% for(var i=0; i<pokemon.length; i++) {%>
+
+<div class="row ma-margen-top-bottom">
+  <div class="col-sm-1"></div>
+
+  <div class="col-sm-4 opaque1">
+
+    <div class="text-center ma-borde ma-padding-top-bottom">
+      <h1> <%= pokemon[i].nombre %></h1>
+      <img align="center" id="img1" src="/imagenes/pokemon/<%= pokemon[i].imagen %>.png" height="150px">
+    </div>
+
+  </div>
+
+
+
+  <div class="col-sm-1"></div>
+
+  <div class="col-sm-5 opaque1">
+    <div class="ma-borde" style="margin-top: 40px;">
+
+      <h2 class="text-center ">
+        <%= pokemon[i].nombre %>
+      </h2>
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-2">
+          <p>
+            Tipo1:
+          </p>
+          <p>
+            Tipo2:
+          </p>
+          <p>
+            Entrenador:
+          </p>
+        </div>
+        <div class="col-sm-6">
+      <p>
+        <%= pokemon[i].tipo1 %>
+      </p>
+      <p>
+        <%= pokemon[i].tipo2 %>
+      </p>
+      <p>
+        <%= pokemon[i].idEntrenador.nombres %>
+      </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-1">
+    <a href="/Pokemon/BorrarPokemon?id=<%= pokemon[i].id %>" class="btn btn-danger btn-block">X</a>
+
+    <a href="/EditarPokemon?id=<%= pokemon[i].id %>" class="btn btn-info btn-block">Edit</a>
+  </div>
+</div>
+<br>
+<% }%>
+
+
+
+
+
+
+
+
+
