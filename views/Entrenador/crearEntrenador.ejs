@@ -1,20 +1,19 @@
-
-<div class="row" >
+<div class="row">
   <div class="col-sm-2"></div>
-
-  <div class="col-sm-2">
-    <img align="center" id="img1" class="opaque1" src="/imagenes/entrenadores/Ash.png" height="300px" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+  <div class="col-sm-3">
+    <img align="center" id="img1" class="opaque1" src="/imagenes/entrenadores/Ash.png" height="300px"
+         style="background-color: rgba(0, 0, 0, .8); color: yellow;">
   </div>
-  <div class="col-sm-1"></div>
+  <div class="col-sm-4 opaque1" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
 
-  <div class="col-sm-5 opaque1" style="background-color: rgba(0, 0, 0, .8); color: yellow;" >
+    <h2>ENTRENADOR</h2>
 
-    <h2>Entrenador</h2>
-    <form action="/Entrenador/CrearEntrenador" method="post" >
+    <form action="/Entrenador/CrearEntrenador" method="post">
 
-      <div class="form-group" >
+      <div class="form-group">
         <label>Nombre</label>
-        <select class="form-control" id="exampleSelect1" name="region" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+          <select type="text" class="form-control" id="select1" name="nombres" onchange="cambiarEntrenador();"
+                style="background-color: rgba(0, 0, 0, .8); color: yellow;">
           <option>Ash</option>
           <option>Brock</option>
           <option>Eco</option>
@@ -30,19 +29,20 @@
           <option>Red</option>
           <option>Roque</option>
           <option>Sinnoh</option>
-          <option>Trace</option>
+          <option>Tracey</option>
         </select>
-       <!--<input type="text" class="form-control" placeholder="Ingrese su nombre" name="nombres" style="background-color: rgba(0, 0, 0, .8); color: yellow;">-->
       </div>
 
-      <div class="form-group" >
+      <div class="form-group">
         <label>Fecha inicio</label>
-        <input type="date" class="form-control"  id="datePicker" name="fechaInicio" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+        <input type="date" class="form-control" id="datePicker" name="fechaInicio"
+               style="background-color: rgba(0, 0, 0, .8); color: yellow;">
       </div>
 
       <div class="form-group">
         <label>Region</label>
-        <select class="form-control" id="exampleSelect1" name="region" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+        <select class="form-control" id="exampleSelect1" name="region"
+                style="background-color: rgba(0, 0, 0, .8); color: yellow;">
           <option>Alola</option>
           <option>Johto</option>
           <option>Kanto</option>
@@ -53,13 +53,22 @@
         </select>
       </div>
 
-      <button type="submit" class="btn btn-success">Crear Entrenador :)</button>
+      <input type="hidden" id="inputImagen" name="imagen" value="Abra"
+             style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+      <button  type="submit" class="btn btn-success" style="background-color: rgba(0, 0, 0, .8); color: yellow;">CREAR</button>
     </form>
-
     <br>
-
     <script src="/bootstrap/js/codigo.js"></script>
   </div>
-
-  <div class="col-sm-4"></div>
+  <div class="col-sm-1"></div>
 </div>
+
+
+<script type="text/javascript">
+
+  function cambiarEntrenador() {
+    var porId = document.getElementById("select1").value;
+    document.getElementById('img1').src = "/imagenes/entrenadores/" + porId + ".png";
+    document.getElementById('inputImagen').value = porId;
+  }
+</script>

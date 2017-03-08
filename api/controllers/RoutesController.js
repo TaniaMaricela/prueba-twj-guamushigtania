@@ -15,7 +15,7 @@ module.exports = {
   error: function (req, res) {
     return res.view('vistas/Error', {
       error: {
-        desripcion: "Usted esta por error en esta Ruta dirijase a Inicio",
+        descripcion: "Pagina no encontrada Dirijase a Inicio",
         rawError: "Ruta equivocada",
         url: "/Inicio"
       }
@@ -28,7 +28,7 @@ module.exports = {
         if (errorIndefinido) {
           res.view('vistas/Error', {
             error: {
-              desripcion: "Hubo un problema cargando los Entrenadores",
+              descripcion: "Problema al ver Entrenadores",
               rawError: errorIndefinido,
               url: "/ListarEntrenadores"
             }
@@ -49,20 +49,20 @@ module.exports = {
         if (errorInesperado) {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "Error Inesperado",
+              descripcion: "Error Inesperado",
               rawError: errorInesperado,
               url: "/ListarEntrenadores"
             }
           });
         }
-        if(entrenadorEncontrado){
-          return res.view("Entrenador/editarEntrenador",{
-           entrenadorAEditar:entrenadorEncontrado
+        if (entrenadorEncontrado) {
+          return res.view("Entrenador/editarEntrenador", {
+            entrenadorAEditar: entrenadorEncontrado
           });
-        }else{
+        } else {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "El entrenador con id: "+parametros.id+" no existe.",
+              descripcion: "El entrenador con id: " + parametros.id + " no existe.",
               rawError: "No existe el entrenador",
               url: "/ListarEntrenadores"
             }
@@ -73,7 +73,7 @@ module.exports = {
 
       return res.view('vistas/Error', {
         error: {
-          desripcion: "No ha enviado el parametro ID",
+          descripcion: "No ha enviado el parametro ID",
           rawError: "Faltan Parametros",
           url: "/ListarEntrenadores"
         }
@@ -88,7 +88,7 @@ module.exports = {
         if (errorIndefinido) {
           res.view('vistas/Error', {
             error: {
-              desripcion: "Hubo un problema cargando los Entrenadores",
+              descripcion: "Hubo un problema cargando los Entrenadores",
               rawError: errorIndefinido,
               url: "/"
             }
@@ -106,7 +106,7 @@ module.exports = {
         if (errorIndefinido) {
           res.view('vistas/Error', {
             error: {
-              desripcion: "Hubo un problema cargando los Pokemon",
+              descripcion: "Hubo un problema cargando los Pokemon",
               rawError: errorIndefinido,
               url: "/ListarPokemon"
             }
@@ -127,36 +127,36 @@ module.exports = {
         if (errorInesperado) {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "Error Inesperado",
+              descripcion: "Error Inesperado",
               rawError: errorInesperado,
               url: "/ListarPokemon"
             }
           });
         }
-        if(pokemonEncontrado){
+        if (pokemonEncontrado) {
           Entrenador.find()
             .exec(function (errorIndefinido, entrenadoresEncontrados) {
 
               if (errorIndefinido) {
                 res.view('vistas/Error', {
                   error: {
-                    desripcion: "Hubo un problema cargando los Entrenadores",
+                    descripcion: "Hubo un problema cargando los Entrenadores",
                     rawError: errorIndefinido,
                     url: "/"
                   }
                 });
               }
-              return res.view("Pokemon/editarPokemon",{
-                pokemonAEditar:pokemonEncontrado,
+              return res.view("Pokemon/editarPokemon", {
+                pokemonAEditar: pokemonEncontrado,
                 entrenadores: entrenadoresEncontrados
               });
 
             })
 
-        }else{
+        } else {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "El pokemon con id: "+parametros.id+" no existe.",
+              descripcion: "El pokemon con id: " + parametros.id + " no existe.",
               rawError: "No existe el okemon",
               url: "/ListarPokemon"
             }
@@ -167,7 +167,7 @@ module.exports = {
 
       return res.view('vistas/Error', {
         error: {
-          desripcion: "No ha enviado el parametro ID",
+          descripcion: "No ha enviado el parametro ID",
           rawError: "Faltan Parametros",
           url: "/ListarPokemon"
         }
@@ -175,7 +175,5 @@ module.exports = {
 
     }
   },
-
-
-  };
+};
 

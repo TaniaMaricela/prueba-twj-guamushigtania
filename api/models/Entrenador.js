@@ -9,25 +9,19 @@ module.exports = {
 
   attributes: {
 
-    nombres:{
-      type:'string',
-      required:true
+    nombres: {
+      type: 'string',
+      required: true
     },
-    imagen:{
-      type:'string'
+    imagen: {
+      type: 'string'
     },
-    fechaInicio:{
-      type:'date'
+    fechaInicio: {
+      type: 'date'
     },
-    Region:{
-      type:'string',
-      enum:['Alola',
-        'Johto',
-        'Kanto',
-        'Hoenn',
-        'Teselia',
-        'Sinnoh',
-        'Kalos'
+    Region: {
+      type: 'string',
+      enum: ['Alola', 'Johto', 'Kanto', 'Hoenn', 'Teselia', 'Sinnoh', 'Kalos'
       ]
     },
     pokemon: {

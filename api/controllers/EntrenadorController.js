@@ -23,9 +23,9 @@ module.exports = {
         Entrenador.create(entrenadorCrear).exec(function (err, entrenadorCreado) {
 
           if (err) {
-            return res.view('vistas/Error', {
+            return res.view('vistas /Error', {
               error: {
-                desripcion: "Fallo al crear el Entrenador",
+                descripcion: "Fallo al crear el Entrenador",
                 rawError: err,
                 url: "/CrearEntrenador"
               }
@@ -39,7 +39,7 @@ module.exports = {
               if (errorIndefinido) {
                 res.view('vistas/Error', {
                   error: {
-                    desripcion: "Hubo un problema cargando los Entrenadores",
+                    descripcion: "Hubo un problema cargando los Entrenadores",
                     rawError: errorIndefinido,
                     url: "/ListarEntrenadores"
                   }
@@ -58,7 +58,7 @@ module.exports = {
 
         return res.view('vistas/Error', {
           error: {
-            desripcion: "Llena todos los parametros.",
+            descripcion: "Llena todos los parametros.",
             rawError: "Fallo en envio de parametros.",
             url: "/CrearEntrenador"
           }
@@ -72,7 +72,7 @@ module.exports = {
 
       return res.view('vistas/Error', {
         error: {
-          desripcion: "Error en el uso del Metodo HTTP",
+          descripcion: "Error en el uso del Metodo HTTP",
           rawError: "HTTP Invalido",
           url: "/CrearEntrenador"
         }
@@ -92,7 +92,7 @@ module.exports = {
         if (errorInesperado) {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "Tuvimos un Error Inesperado",
+              descripcion: "Tuvimos un Error Inesperado",
               rawError: errorInesperado,
               url: "/ListarEntrenadores"
             }
@@ -104,7 +104,7 @@ module.exports = {
             if (errorIndefinido) {
               res.view('vistas/Error', {
                 error: {
-                  desripcion: "Hubo un problema cargando los entrenadores",
+                  descripcion: "Hubo un problema cargando los entrenadores",
                   rawError: errorIndefinido,
                   url: "/ListarEntrenadores"
                 }
@@ -119,7 +119,7 @@ module.exports = {
     } else {
       return res.view('vistas/Error', {
         error: {
-          desripcion: "Necesitamos el ID para borrar al Entrenador",
+          descripcion: "Necesitamos el ID para borrar al Entrenador",
           rawError: "No envia ID",
           url: "/ListarEntrenadores"
         }
@@ -145,7 +145,7 @@ module.exports = {
         if (errorInesperado) {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "Tuvimos un Error Inesperado",
+              descripcion: "Tuvimos un Error Inesperado",
               rawError: errorInesperado,
               url: "/ListarEntrenadores"
             }
@@ -157,7 +157,7 @@ module.exports = {
             if (errorIndefinido) {
               res.view('vistas/Error', {
                 error: {
-                  desripcion: "Hubo un problema cargando los Entrenadores",
+                  descripcion: "Hubo un problema cargando los Entrenadores",
                   rawError: errorIndefinido,
                   url: "/EditarEntrenador"
                 }
@@ -173,7 +173,7 @@ module.exports = {
     } else {
       return res.view('vistas/Error', {
         error: {
-          desripcion: "Necesitamos que envies los parámetros ",
+          descripcion: "Necesitamos que envies los parámetros ",
           rawError: "No envia Parámetros",
           url: "/ListarEntrenadores"
         }

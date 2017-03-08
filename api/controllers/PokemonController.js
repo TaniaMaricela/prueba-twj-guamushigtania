@@ -18,7 +18,7 @@ module.exports = {
           imagen: parametros.imagen,
           tipo1:parametros.tipo1,
           tipo2:parametros.tipo2,
-          idEntrenador:parametros.idEntrenador,
+          idEntrenador:parametros.idEntrenador
         };
         console.log(pokemonCrear);
         Pokemon.create(pokemonCrear).exec(function (err, pokemonCreado) {
@@ -26,7 +26,7 @@ module.exports = {
           if (err) {
             return res.view('vistas/Error', {
               error: {
-                desripcion: "Fallo al crear Pokémon",
+                descripcion: "Fallo al crear Pokémon",
                 rawError: err,
                 url: "/CrearPokemon"
               }
@@ -40,7 +40,7 @@ module.exports = {
               if (errorIndefinido) {
                 res.view('vistas/Error', {
                   error: {
-                    desripcion: "Hubo un problema cargando los pokémon",
+                    descripcion: "Hubo un problema cargando los pokémon",
                     rawError: errorIndefinido,
                     url: "/ListarPokemon"
                   }
@@ -59,7 +59,7 @@ module.exports = {
 
         return res.view('vistas/Error', {
           error: {
-            desripcion: "Llena todos los parametros.",
+            descripcion: "Llena todos los parametros.",
             rawError: "Fallo en envio de parametros.",
             url: "/CrearPokemon"
           }
@@ -73,7 +73,7 @@ module.exports = {
 
       return res.view('vistas/Error', {
         error: {
-          desripcion: "Error en el uso del Metodo HTTP",
+          descripcion: "Error en el uso del Metodo HTTP",
           rawError: "HTTP Invalido",
           url: "/CrearPokemon"
         }
@@ -93,7 +93,7 @@ module.exports = {
         if (errorInesperado) {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "Tuvimos un Error Inesperado",
+              descripcion: "Tuvimos un Error Inesperado",
               rawError: errorInesperado,
               url: "/ListarPokemon"
             }
@@ -105,7 +105,7 @@ module.exports = {
             if (errorIndefinido) {
               res.view('vistas/Error', {
                 error: {
-                  desripcion: "Hubo un problema cargando los pokemon",
+                  descripcion: "Hubo un problema cargando los pokemon",
                   rawError: errorIndefinido,
                   url: "/ListarPokemon"
                 }
@@ -120,7 +120,7 @@ module.exports = {
     } else {
       return res.view('vistas/Error', {
         error: {
-          desripcion: "Necesitamos el ID para borrar al Pokemon",
+          descripcion: "Necesitamos el ID para borrar al Pokemon",
           rawError: "No envia ID",
           url: "/ListarPokemon"
         }
@@ -137,7 +137,7 @@ module.exports = {
         imagen: parametros.imagen,
         tipo1:parametros.tipo1,
         tipo2:parametros.tipo2,
-        idEntrenador:parametros.idEntrenador,
+        idEntrenador:parametros.idEntrenador
       };
 
       Pokemon.update({
@@ -146,7 +146,7 @@ module.exports = {
         if (errorInesperado) {
           return res.view('vistas/Error', {
             error: {
-              desripcion: "Tuvimos un Error Inesperado",
+              descripcion: "Tuvimos un Error Inesperado",
               rawError: errorInesperado,
               url: "/ListarPokemon"
             }
@@ -158,7 +158,7 @@ module.exports = {
             if (errorIndefinido) {
               res.view('vistas/Error', {
                 error: {
-                  desripcion: "Hubo un problema cargando los pokemon",
+                  descripcion: "Hubo un problema cargando los pokemon",
                   rawError: errorIndefinido,
                   url: "/EditarPokemon"
                 }
@@ -174,13 +174,13 @@ module.exports = {
     } else {
       return res.view('vistas/Error', {
         error: {
-          desripcion: "Necesitamos que envies los parámetros ",
+          descripcion: "Necesitamos que envies los parámetros ",
           rawError: "No envia Parámetros",
           url: "/ListarPokemon"
         }
       });
     }
 
-  },
+  }
 };
 

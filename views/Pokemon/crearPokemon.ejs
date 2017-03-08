@@ -1,247 +1,250 @@
-
 <div class="row">
   <div class="col-sm-1"></div>
-
-  <div class="col-sm-2">
-    <img align="center" id="img1" class="opaque1" src="/imagenes/pokemon/Abra.png" height="300px" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+  <div class="col-sm-3">
+    <img align="center" id="img1" class="opaque1" src="/imagenes/pokemon/Abra.png" height="300px"
+         style="background-color: rgba(0, 0, 0, .8); color: yellow;">
   </div>
-  <div class="col-sm-2"></div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4 opaque1" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
 
-  <div class="col-sm-5 opaque1" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+    <h2>POKÉMON</h2>
 
-  <h2>Pokémon</h2>
+    <form action="/Pokemon/CrearPokemon" method="post">
 
-  <form action="/Pokemon/CrearPokemon" method="post">
+      <div class="form-group">
+        <label>Nombre:</label>
 
-    <div class="form-group">
-      <label>Nombre:</label>
-      <select class="form-control" id="select1" name="nombre" onchange="cambiar();" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
-        <option>Abra</option >
-        <option>Aerodactyl</option>
-        <option>Alakazam</option>
-        <option>Arbok</option>
-        <option>Arcanine</option>
-        <option>Articuno</option>
-        <option>Beedrill </option>
-        <option>Bellsprout</option>
-        <option>Blastoise </option>
-        <option>Bulbasaur</option>
-        <option>Butterfree </option>
-        <option>Caterpie </option>
-        <option>Chansey</option>
-        <option>Charizard</option>
-        <option>Charmander</option>
-        <option>Charmeleon</option>
-        <option>Clefable</option>
-        <option>Clefairy </option>
-        <option>Cloyster</option>
-        <option>Cubone</option>
-        <option>Dewgong</option>
-        <option>Diglett</option>
-        <option>Ditto</option>
-        <option>Dodrio</option>
-        <option>Doduo</option>
-        <option>Dragonair</option>
-        <option>Dragonite</option>
-        <option>Dratini</option>
-        <option>Drowzee</option>
-        <option>Dugtrio</option>
-        <option>Eevee</option>
-        <option>Ekans </option>
-        <option>Electabuzz</option>
-        <option>Electrode</option>
-        <option>Exeggcute</option>
-        <option>Exeggutor</option>
-        <option>Farfetch</option>
-        <option>Fearow </option>
-        <option>Flareon</option>
-        <option>Gastly</option>
-        <option>Gengar</option>
-        <option>Geodude</option>
-        <option>Gloom</option>
-        <option>Golbat</option>
-        <option>Goldeen</option>
-        <option>Golduck</option>
-        <option>Golem</option>
-        <option>Graveler</option>
-        <option>Grimer</option>
-        <option>Growlithe</option>
-        <option>Gyarados</option>
-        <option>Haunter</option>
-        <option>Hitmonchan</option>
-        <option>Hitmonlee</option>
-        <option>Horsea</option>
-        <option>Hypno</option>
-        <option>Ivysaur</option>
-        <option>Jigglypuff</option>
-        <option>Jolteon</option>
-        <option>Jynx</option>
-        <option>Kabuto</option>
-        <option>Kabutops</option>
-        <option>Kadabra</option>
-        <option>Kakuna</option>
-        <option>Kangaskhan</option>
-        <option>Kingler</option>
-        <option>Koffing</option>
-        <option>Krabby</option>
-        <option>Lapras </option>
-        <option>Lickitung</option>
-        <option>Machamp</option>
-        <option>Machoke</option>
-        <option>Machop</option>
-        <option>Magikarp</option>
-        <option>Magmar</option>
-        <option>Magnemite</option>
-        <option>Magneton</option>
-        <option>Mankey </option>
-        <option>Marowak</option>
-        <option>Metapod </option>
-        <option>Mew</option>
-        <option>Mewtwo</option>
-        <option>Moltres</option>
-        <option>Mr.Mime</option>
-        <option>Muk</option>
-        <option>Nidoking</option>
-        <option>Nidoqueen </option>
-        <option>NidoranF</option>
-        <option>NidoranM</option>
-        <option>Nidorina </option>
-        <option>Nidorino</option>
-        <option>Ninetales</option>
-        <option>Oddish</option>
-        <option>Omanyte</option>
-        <option>Omastar</option>
-        <option>Onix</option>
-        <option>Paras</option>
-        <option>Parasect</option>
-        <option>Persian</option>
-        <option>Pidgeot </option>
-        <option>Pidgeotto </option>
-        <option>Pidgey </option>
-        <option>Pikachu</option>
-        <option>Pinsir</option>
-        <option>Poliwag</option>
-        <option>Poliwhirl</option>
-        <option>Poliwrath</option>
-        <option>Ponyta</option>
-        <option>Porygon</option>
-        <option>Primeape</option>
-        <option>Psyduck</option>
-        <option>Raichu </option>
-        <option>Rapidash</option>
-        <option>Raticate </option>
-        <option>Rattata</option>
-        <option>Rhydon</option>
-        <option>Rhyhorn</option>
-        <option>Sandshrew </option>
-        <option>Sandslash </option>
-        <option>Scyther</option>
-        <option>Seadra</option>
-        <option>Seaking</option>
-        <option>Seel</option>
-        <option>Shellder</option>
-        <option>Slowbro</option>
-        <option>Slowpoke</option>
-        <option>Snorlax</option>
-        <option>Spearow </option>
-        <option>Squirtle </option>
-        <option>Starmie</option>
-        <option>Staryu</option>
-        <option>Tangela</option>
-        <option>Tauros</option>
-        <option>Tentacool</option>
-        <option>Tentacruel</option>
-        <option>Vaporeon</option>
-        <option>Venomoth</option>
-        <option>Venonat</option>
-        <option>Venusaur</option>
-        <option>Victreebel</option>
-        <option>Vileplume</option>
-        <option>Voltorb</option>
-        <option>Vulpix</option>
-        <option>Wartortle </option>
-        <option>Weedle</option>
-        <option>Weepinbell</option>
-        <option>Weezing</option>
-        <option>Wigglytuff</option>
-        <option>Zapdos</option>
-        <option>Zubat</option>
-      </select>
-    </div>
+        <select type="text" class="form-control" id="select1" name="nombre" onchange="cambiarPokemon();"
+                style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+          <option>Abra</option>
+          <option>Aerodactyl</option>
+          <option>Alakazam</option>
+          <option>Arbok</option>
+          <option>Arcanine</option>
+          <option>Articuno</option>
+          <option>Beedrill</option>
+          <option>Bellsprout</option>
+          <option>Blastoise</option>
+          <option>Bulbasaur</option>
+          <option>Butterfree</option>
+          <option>Caterpie</option>
+          <option>Chansey</option>
+          <option>Charizard</option>
+          <option>Charmander</option>
+          <option>Charmeleon</option>
+          <option>Clefable</option>
+          <option>Clefairy</option>
+          <option>Cloyster</option>
+          <option>Cubone</option>
+          <option>Dewgong</option>
+          <option>Diglett</option>
+          <option>Ditto</option>
+          <option>Dodrio</option>
+          <option>Doduo</option>
+          <option>Dragonair</option>
+          <option>Dragonite</option>
+          <option>Dratini</option>
+          <option>Drowzee</option>
+          <option>Dugtrio</option>
+          <option>Eevee</option>
+          <option>Ekans</option>
+          <option>Electabuzz</option>
+          <option>Electrode</option>
+          <option>Exeggcute</option>
+          <option>Exeggutor</option>
+          <option>Farfetch</option>
+          <option>Fearow</option>
+          <option>Flareon</option>
+          <option>Gastly</option>
+          <option>Gengar</option>
+          <option>Geodude</option>
+          <option>Gloom</option>
+          <option>Golbat</option>
+          <option>Goldeen</option>
+          <option>Golduck</option>
+          <option>Golem</option>
+          <option>Graveler</option>
+          <option>Grimer</option>
+          <option>Growlithe</option>
+          <option>Gyarados</option>
+          <option>Haunter</option>
+          <option>Hitmonchan</option>
+          <option>Hitmonlee</option>
+          <option>Horsea</option>
+          <option>Hypno</option>
+          <option>Ivysaur</option>
+          <option>Jigglypuff</option>
+          <option>Jolteon</option>
+          <option>Jynx</option>
+          <option>Kabuto</option>
+          <option>Kabutops</option>
+          <option>Kadabra</option>
+          <option>Kakuna</option>
+          <option>Kangaskhan</option>
+          <option>Kingler</option>
+          <option>Koffing</option>
+          <option>Krabby</option>
+          <option>Lapras</option>
+          <option>Lickitung</option>
+          <option>Machamp</option>
+          <option>Machoke</option>
+          <option>Machop</option>
+          <option>Magikarp</option>
+          <option>Magmar</option>
+          <option>Magnemite</option>
+          <option>Magneton</option>
+          <option>Mankey</option>
+          <option>Marowak</option>
+          <option>Metapod</option>
+          <option>Meowth</option>
+          <option>Mew</option>
+          <option>Mewtwo</option>
+          <option>Moltres</option>
+          <option>Mr.Mime</option>
+          <option>Muk</option>
+          <option>Nidoking</option>
+          <option>Nidoqueen</option>
+          <option>NidoranF</option>
+          <option>NidoranM</option>
+          <option>Nidorina</option>
+          <option>Nidorino</option>
+          <option>Ninetales</option>
+          <option>Oddish</option>
+          <option>Omanyte</option>
+          <option>Omastar</option>
+          <option>Onix</option>
+          <option>Paras</option>
+          <option>Parasect</option>
+          <option>Persian</option>
+          <option>Pidgeot</option>
+          <option>Pidgeotto</option>
+          <option>Pidgey</option>
+          <option>Pikachu</option>
+          <option>Pinsir</option>
+          <option>Poliwag</option>
+          <option>Poliwhirl</option>
+          <option>Poliwrath</option>
+          <option>Ponyta</option>
+          <option>Porygon</option>
+          <option>Primeape</option>
+          <option>Psyduck</option>
+          <option>Raichu</option>
+          <option>Rapidash</option>
+          <option>Raticate</option>
+          <option>Rattata</option>
+          <option>Rhydon</option>
+          <option>Rhyhorn</option>
+          <option>Sandshrew</option>
+          <option>Sandslash</option>
+          <option>Scyther</option>
+          <option>Seadra</option>
+          <option>Seaking</option>
+          <option>Seel</option>
+          <option>Shellder</option>
+          <option>Slowbro</option>
+          <option>Slowpoke</option>
+          <option>Snorlax</option>
+          <option>Spearow</option>
+          <option>Squirtle</option>
+          <option>Starmie</option>
+          <option>Staryu</option>
+          <option>Tangela</option>
+          <option>Tauros</option>
+          <option>Tentacool</option>
+          <option>Tentacruel</option>
+          <option>Vaporeon</option>
+          <option>Venomoth</option>
+          <option>Venonat</option>
+          <option>Venusaur</option>
+          <option>Victreebel</option>
+          <option>Vileplume</option>
+          <option>Voltorb</option>
+          <option>Vulpix</option>
+          <option>Wartortle</option>
+          <option>Weedle</option>
+          <option>Weepinbell</option>
+          <option>Weezing</option>
+          <option>Wigglytuff</option>
+          <option>Zapdos</option>
+          <option>Zubat</option>
+        </select>
+      </div>
 
-    <div class="form-group">
-      <label>Tipo 1</label>
-      <select class="form-control" name="Tipo 1" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
-        <option>Acero</option>
-        <option>Agua</option>
-        <option>Bicho</option>
-        <option>Dragón</option>
-        <option>Eléctrico</option>
-        <option>Fantasma</option>
-        <option>Fuego</option>
-        <option>Hada</option>
-        <option>Hielo</option>
-        <option>Lucha</option>
-        <option>Normal</option>
-        <option>Planta</option>
-        <option>Psíquico</option>
-        <option>Roca</option>
-        <option>Siniestro</option>
-        <option>Tierra</option>
-        <option>Veneno</option>
-        <option>Volador</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <label>Tipo 1</label>
+        <select class="form-control" name="tipo1" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+          <option>Acero</option>
+          <option>Agua</option>
+          <option>Bicho</option>
+          <option>Dragón</option>
+          <option>Eléctrico</option>
+          <option>Fantasma</option>
+          <option>Fuego</option>
+          <option>Hada</option>
+          <option>Hielo</option>
+          <option>Lucha</option>
+          <option>Normal</option>
+          <option>Planta</option>
+          <option>Psíquico</option>
+          <option>Roca</option>
+          <option>Siniestro</option>
+          <option>Tierra</option>
+          <option>Veneno</option>
+          <option>Volador</option>
+        </select>
+      </div>
 
-    <div class="form-group">
-      <label>Tipo2</label>
-      <select class="form-control" name="Tipo 2" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
-        <option>Acero</option>
-        <option>Agua</option>
-        <option>Bicho</option>
-        <option>Dragón</option>
-        <option>Eléctrico</option>
-        <option>Fantasma</option>
-        <option>Fuego</option>
-        <option>Hada</option>
-        <option>Hielo</option>
-        <option>Lucha</option>
-        <option>Normal</option>
-        <option>Planta</option>
-        <option>Psíquico</option>
-        <option>Roca</option>
-        <option>Siniestro</option>
-        <option>Tierra</option>
-        <option>Veneno</option>
-        <option>Volador</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <label>Tipo2</label>
+        <select class="form-control" name="tipo2" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+          <option>Acero</option>
+          <option>Agua</option>
+          <option>Bicho</option>
+          <option>Dragón</option>
+          <option>Eléctrico</option>
+          <option>Fantasma</option>
+          <option>Fuego</option>
+          <option>Hada</option>
+          <option>Hielo</option>
+          <option>Lucha</option>
+          <option>Normal</option>
+          <option>Planta</option>
+          <option>Psíquico</option>
+          <option>Roca</option>
+          <option>Siniestro</option>
+          <option>Tierra</option>
+          <option>Veneno</option>
+          <option>Volador</option>
+        </select>
+      </div>
 
-    <div class="form-group">
-      <label>Entrenador</label>
-      <select class="form-control" name="idEntrenador" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
-        <% for(var i=0; i<entrenadores.length; i++){ %>
-        <option value='<%=entrenadores[i].id %>'>
-          <%=entrenadores[i].nombres%>
-        </option>
-        <%  } %>
-      </select>
-    </div>
+      <div class="form-group">
+        <label>Entrenador</label>
+        <select class="form-control" name="idEntrenador" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+          <% for(var i = 0; i < entrenadores.length; i++){ %>
+          <option value='<%= entrenadores[i].id %>'>
+            <%= entrenadores[i].nombres %>
+          </option>
+          <% } %>
+        </select>
+      </div>
 
-    <input type="hidden" id="inputImagen" name="imagen" value="Abra" style="background-color: rgba(0, 0, 0, .8); color: yellow;">
-    <button type="submit" class="btn btn-success" style="background-color: rgba(0, 0, 0, .8); color: yellow;">Crear Pokémon :)</button>
+      <input type="hidden" id="inputImagen" name="imagen" value="Abra"
+             style="background-color: rgba(0, 0, 0, .8); color: yellow;">
+      <button type="submit" class="btn btn-success" style="background-color: rgba(0, 0, 0, .8); color: yellow;">CREAR</button>
     </form>
     <br>
     <script src="/bootstrap/js/date.js"></script>
   </div>
+  <div class="col-sm-1"></div>
 </div>
 
 
 <script type="text/javascript">
 
-  function cambiar () {
-    var porId=document.getElementById("select1").value;
-    document.getElementById('img1').src = "/imagenes/pokemon/"+porId+".png";
-    document.getElementById('inputImagen').value=porId;
+  function cambiarPokemon() {
+    var porId = document.getElementById("select1").value;
+    document.getElementById('img1').src = "/imagenes/pokemon/" + porId + ".png";
+    document.getElementById('inputImagen').value = porId;
   }
 </script>
